@@ -1,5 +1,6 @@
 # -*- coding = utf8 -*-
 # pymysqlModel:insert del update select
+# py-version = 2.7
 import time
 
 __authro__ = 'Drw'
@@ -30,20 +31,20 @@ class mysqlModel(object):
             where = " where "+where
         selSql = "select %s from %s %s" % (field,tbName,where)
         return self.excute(selSql)
+    
     # update
     def update(self, field, value,tbName, where):
         if where:
             where = " where "+where
         updateSql = "update %s set %s=%s %s" % (tbName,field,value,where)
         return self.excute(updateSql)
+    
     # delete
     def delete(self,tbName, where):
         if where:
             where = " where "+where
         delSql = "delete from %s %s" % (tbName,where)
         return self.excute(delSql)
-
-
 
     # execute
     def excute(self, sql):
