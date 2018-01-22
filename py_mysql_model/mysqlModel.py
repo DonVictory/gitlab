@@ -2,10 +2,9 @@
 # pymysqlModel:insert del update select
 # py-version = 2.7
 import time
+import pymysql
 
 __authro__ = 'Drw'
-
-import pymysql
 
 class mysqlModel(object):
     # init
